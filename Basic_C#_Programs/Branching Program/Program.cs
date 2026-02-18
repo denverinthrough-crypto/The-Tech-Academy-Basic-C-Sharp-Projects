@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Globalization;
 
 namespace Branching
 {
@@ -10,14 +11,68 @@ namespace Branching
     {
         static void Main(string[] args)
         {
+            // Display the welcom message (must be first line)
+            Console.WriteLine("Welcome to Package Express.Please follow the instructions below");
 
-            Console.WriteLine("What is your favorite number?");
-            int favNum = Convert.ToInt32(Console.ReadLine());
+            // Declare variables for weight and dimensions
+            double weight; // Stores package weight
+            double width; // Stores package width
+            double height; // Stores package height
+            double length; // Stores package length;
 
-            string result = favNum == 24 ? "You have an awesome favorite number." : "You do not have an awesome favorite number.";
+            // Ask user  for package weight
+            Console.WriteLine("Please enter the package weigth: ");
+            weight = Convert.ToDouble(Console.ReadLine()); // Conver text input to number
 
-            Console.WriteLine(result);
-            Console.ReadLine();
+            // If weight is too heavy, show error and stop program
+            if (weight > 50)
+            {
+                Console.WriteLine("Package too heavy to be shipped via Package Express. Have a good day.");
+                return; // End program
+            }
+
+            // As user for width
+            Console.WriteLine("Please enter the package width: ");
+            width = Convert.ToDouble(Console.ReadLine());
+
+            // Ask user for height
+            Console.WriteLine("Please enter the package height: ");
+            height = Convert.ToDouble(Console.ReadLine());
+
+            // Ask user for length
+            Console.WriteLine("Please enter the package length; ");
+            length = Convert.ToDouble(Console.ReadLine());
+
+            // Check if total dimesnions exceed 50
+            if ((width + height + length) > 50)
+            {
+                Console.WriteLine("Package too big to be shipped via Package Express. ");
+                return; // Ends program
+            }
+
+            // Multiply dimensions together to get volume
+            double volume = width * height * height;
+
+            // Multiply volume by weight
+            double cost = volume * weight;
+
+            // Divide by 100 to get final shipping quote
+            double quote = cost / 100;
+
+            // Display quote formatted as currency (two decimal places)
+            Console.WriteLine("Your estimated total for shipping this package is: $" + quote.ToString("0.00"));
+
+            // Final messasge
+            Console.WriteLine("Thank you!");
+
+
+            //Console.WriteLine("What is your favorite number?");
+            //int favNum = Convert.ToInt32(Console.ReadLine());
+
+            //string result = favNum == 24 ? "You have an awesome favorite number." : "You do not have an awesome favorite number.";
+
+            //Console.WriteLine(result);
+            //Console.ReadLine();
             //int roomTemperature = 70;
 
             //Console.WriteLine("Hi, what is your name?");
