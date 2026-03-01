@@ -86,7 +86,7 @@ class Program
         for (int i = 0; i < fruits.Length; i++)
         {
             Console.WriteLine(fruits[i]);
-            Console.ReadLine();
+            
         }
 
 
@@ -107,6 +107,31 @@ class Program
         }
 
         Console.WriteLine("Loop finsihed!");
+       
+
+        // ***************** ASSIGNMENT PART 3 *****************
+        // Loop 1: using "<" operator
+        Console.WriteLine("\n--- Loop with < operator --- ");
+        int a = 0;
+        while (a < 5)
+        {
+            Console.WriteLine("< Looop iteration: " + (a + 1));
+            a++;
+        }
+        Console.WriteLine("< Loop finished!");
+
+        // Loop 2: using "<=" operator
+        Console.WriteLine("\n--- Loop with <= operator --- ");
+        int j = 0;
+        while (j <= 5)
+        {
+            Console.WriteLine("<= Loop iteration: " + (j + 1));
+            j++;
+        }
+        Console.WriteLine("<= Loop finsihed!");
+        
+
+        
 
 
         
