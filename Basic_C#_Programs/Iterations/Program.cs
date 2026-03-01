@@ -132,19 +132,28 @@ class Program
 
         // ***************** ASSIGNMENT PART 4 ****************
         List<string> uniqueWords = new List<string>() { "downtown", "fly", "robust", "academy", "damn" };
-        bool matchFound = false;
-        
-        while (!matchFound)
+
+
+        while (true)
         {
-            Console.WriteLine("Enter text to search for: ");
+            // Ask user to search the text or exit
+            Console.WriteLine("Enter text to search (or type 'exit' to quit): ");
             string searchText = Console.ReadLine();
 
-
-            for (int k = 0; k < uniqueWords.Count; k++)
+            if (searchText == "exit") // went user input exit, exit the program
             {
-                if (uniqueWords[k] == searchText)
+                Console.WriteLine("Goodbye!");
+                break;
+            }
+
+            bool matchFound = false;
+
+
+            for (int k = 0; k < uniqueWords.Count; k++) // loop through every elements  in the list 
+            {
+                if (uniqueWords[k] == searchText) // check current list elements matches search text/word
                 {
-                    Console.WriteLine("Found it! Index: " + k);
+                    Console.WriteLine("Found it! Index: " + k); // print match found and print index number where it was found
                     matchFound = true;
                     break;
                 }
@@ -152,7 +161,7 @@ class Program
 
             if (!matchFound)
             {
-                Console.WriteLine(searchText + " is not on the list. Try again\n");
+                Console.WriteLine(searchText + " is not on the list. Try again\n"); // tells users no match found that their input wasn't on the list
             }
 
         }
