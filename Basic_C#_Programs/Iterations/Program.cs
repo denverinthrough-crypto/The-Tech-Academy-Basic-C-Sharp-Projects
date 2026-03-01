@@ -195,5 +195,33 @@ class Program
         {
             Console.WriteLine(searchText2 + " is not on the list.");
         }
+
+
+        // *************** ASSIGNMENT PART 6 ****************
+
+        // List of strings with at least two indentical strings
+        List<string> cars = new List<string>() { "BMW", "Toyota", "Ferrari", "BMW", "Honda", "Ferrari" };
+
+        // A separate list
+        List<string> seenItems = new List<string>();
+
+        // foreach loop that goes throug each item in the list one by one 
+        foreach(string car in cars)
+        {
+            // Check if already seen this item before
+            if(seenItems.Contains(car))
+            {
+
+                // if it's, tell user
+                Console.WriteLine(car + " - this item is a duplicate \n");
+            }
+            else
+            {
+                // Add the item 
+                Console.Write(car + " - this item is unique \n");
+
+                seenItems.Add(car);
+            }
+        }
     }
 }
