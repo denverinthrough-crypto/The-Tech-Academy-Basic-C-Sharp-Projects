@@ -86,7 +86,7 @@ class Program
         for (int i = 0; i < fruits.Length; i++)
         {
             Console.WriteLine(fruits[i]);
-            
+
         }
 
 
@@ -107,7 +107,7 @@ class Program
         }
 
         Console.WriteLine("Loop finsihed!");
-       
+
 
         // ***************** ASSIGNMENT PART 3 *****************
         // Loop 1: using "<" operator
@@ -129,17 +129,33 @@ class Program
             j++;
         }
         Console.WriteLine("<= Loop finsihed!");
+
+        // ***************** ASSIGNMENT PART 4 ****************
+        List<string> uniqueWords = new List<string>() { "downtown", "fly", "robust", "academy", "damn" };
+        bool matchFound = false;
         
-
-        
-
-
-        
-  
-        
+        while (!matchFound)
+        {
+            Console.WriteLine("Enter text to search for: ");
+            string searchText = Console.ReadLine();
 
 
+            for (int k = 0; k < uniqueWords.Count; k++)
+            {
+                if (uniqueWords[k] == searchText)
+                {
+                    Console.WriteLine("Found it! Index: " + k);
+                    matchFound = true;
+                    break;
+                }
+            }
 
+            if (!matchFound)
+            {
+                Console.WriteLine(searchText + " is not on the list. Try again\n");
+            }
+
+        }
 
     }
 }
