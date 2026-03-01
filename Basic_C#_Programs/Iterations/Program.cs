@@ -166,5 +166,34 @@ class Program
 
         }
 
+        // ****************** ASSIGNMENT PART 5 *******************
+
+        // List of strings wwith duplicate values
+        List<string> duplicateWords = new List<string>() { "tiger", "lion", "eagle", "tiger", "shark", "lion" };
+
+        // Ask user to enter text to search for
+        Console.WriteLine("Enter text to search for: ");
+        string searchText2 = Console.ReadLine();
+
+        // track if a match was found
+        bool matchFound2 = false;
+
+        // Loop through each item in the list
+        for (int l = 0; l < duplicateWords.Count; l++)
+        {
+            // Check if the current item matches the user's input
+            if (duplicateWords[l] == searchText2)
+            {
+                // Display the index of the matching item
+                Console.WriteLine("Match found! Index: " + l);
+                matchFound2 = true;
+            }
+            
+        }
+        // If no match was found after the loop, tell the user
+        if (!matchFound2)
+        {
+            Console.WriteLine(searchText2 + " is not on the list.");
+        }
     }
 }
