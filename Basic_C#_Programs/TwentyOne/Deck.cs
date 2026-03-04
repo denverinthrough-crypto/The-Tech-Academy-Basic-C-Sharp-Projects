@@ -6,7 +6,7 @@ namespace TwentyOne
 {
     public class Deck
     {
-        public Deck()
+        public Deck() // Constructor
         {
             Cards = new List<Card>();
             List<string> Suits = new List<string>() { "Clubs", "Hearts", "Diamonds", "Spades" };
@@ -20,7 +20,7 @@ namespace TwentyOne
             {
                 foreach(string suit in Suits)
                 {
-                    Card card = new Card();
+                    Card card = new Card(); // object card created in Card class
                     card.Suit = suit;
                     card.Face = face;
                     Cards.Add(card);

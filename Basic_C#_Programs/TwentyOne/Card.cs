@@ -6,7 +6,7 @@ namespace TwentyOne
 {
     public class Card
     {
-        public Card()
+        public Card() // Construtor
         {
             Suit = "Spades";
             Face = "Two";
