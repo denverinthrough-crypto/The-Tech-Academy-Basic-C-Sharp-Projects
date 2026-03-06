@@ -1,0 +1,23 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace TwentyOne
+{
+    public class Game
+    {
+        public List<string> Players { get; set; } // properties
+        public string Name { get; set; } // properties
+        public string Dealer {  get; set; } // properties
+
+
+        public void ListPlayers()
+        {
+            foreach(string player in Players)
+            {
+                Console.WriteLine(player);
+            }
+             
+        }
+    }
+}
