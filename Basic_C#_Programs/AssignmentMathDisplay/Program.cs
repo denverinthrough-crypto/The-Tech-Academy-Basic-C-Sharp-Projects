@@ -19,11 +19,21 @@ class Program
     {
         MathDisplay mathObj = new MathDisplay(); // create instance of MathDisplay
 
+        // Get two integers from the user
+        Console.WriteLine("Enter first integer (will be squared): ");
+        int operand = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Enter second integer (will be displayed)");
+        int display = int.Parse(Console.ReadLine());
+
+        Console.WriteLine();
+
+            
         // Call method with positional arguments
-        mathObj.ProcessNumbers(5, 42);
+        mathObj.ProcessNumbers(operand, display);
 
         // Call method with named arguments
-        mathObj.ProcessNumbers(operand: 7, display: 42);
+        mathObj.ProcessNumbers(operand: operand, display: display);
     }
 }
 
