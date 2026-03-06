@@ -19,8 +19,6 @@ namespace TwentyOne
                 Console.WriteLine(card.Face + " of " + card.Suit);
             }
             Console.WriteLine(deck.Cards.Count);
-            
-    
             Console.ReadLine();
         }
 
