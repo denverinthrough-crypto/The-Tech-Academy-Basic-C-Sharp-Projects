@@ -23,7 +23,7 @@ class Program
         Console.WriteLine("Enter first integer (will be squared): ");
         int operand = int.Parse(Console.ReadLine());
 
-        Console.WriteLine("Enter second integer (will be displayed)");
+        Console.WriteLine("Enter second integer (will be displayed): ");
         int display = int.Parse(Console.ReadLine());
 
         Console.WriteLine();
