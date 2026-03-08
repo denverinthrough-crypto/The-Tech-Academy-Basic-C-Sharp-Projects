@@ -44,6 +44,17 @@ public class Program
         // Calls the VIRTULA METHOD SayRole() - IS overridden in Employee,
         // So this runs Employee's custom version instead of person's default
         emp.SayRole();
+
+        // ---- POLYMORPHISM ---
+        IQuittable quittable = new Employee
+        {
+            FirstName = firstName,
+            LastName = lastName,
+            JobTitle = jobTitle
+        };
+
+        quittable.Quit();
+
             
            
     }

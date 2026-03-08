@@ -27,5 +27,7 @@ namespace Abstract_Assignment
             // Default role message = Employee will override this
             Console.WriteLine("I am a person.");
         }
+
+        
     }
 }

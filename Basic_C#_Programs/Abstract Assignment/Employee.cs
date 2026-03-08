@@ -6,7 +6,7 @@ namespace Abstract_Assignment
 {
     // Employee inherits from Person, gaining FirstName and LastName properties
     // It must implement the abstract SayName() method from the base class.
-    public class Employee : Person
+    public class Employee : Person, IQuittable
 
     {
         // Property specific to Employee
@@ -24,6 +24,11 @@ namespace Abstract_Assignment
         {
             // Print the employee's specific job title
             Console.WriteLine($"I am an Employee. My job title is {JobTitle}.");
+        }
+
+        public void Quit()
+        {
+            Console.WriteLine($"{FirstName} {LastName} has quit his job as {JobTitle}.");
         }
     }
 }
