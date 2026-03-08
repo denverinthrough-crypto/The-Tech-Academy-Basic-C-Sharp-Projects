@@ -14,5 +14,18 @@ namespace Abstract_Assignment
 
         // Abstract method - no obdy here, subclasses MUST implement this
         public abstract void SayName();
+
+        public virtual void SayHello()
+        {
+            Console.WriteLine($"Hello! I am {FirstName} {LastName}"); ;
+
+
+        }
+
+        public virtual void SayRole()
+        {
+            // Default role message = Employee will override this
+            Console.WriteLine("I am a person.");
+        }
     }
 }

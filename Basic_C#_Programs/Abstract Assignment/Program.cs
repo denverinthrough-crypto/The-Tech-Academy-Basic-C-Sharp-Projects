@@ -18,15 +18,32 @@ public class Program
         // Read and store the last name typed by the user
         string lastName = Console.ReadLine();
 
+        // Prompt the user to enter a job title
+        Console.WriteLine("Enter job title: ");
+
+        // read and store the job title typed by the user
+        string jobTitle = Console.ReadLine();
+
+
+
         // Instantiate a new Employee object using the user's input
         Employee emp = new Employee
         {
             FirstName = firstName, // Assing the entered first name
-            LastName = lastName
+            LastName = lastName,
+            JobTitle = jobTitle
         };
 
         // Call SayName() to print the greeting to the console
         emp.SayName();
+
+        // Calls the VIRTUAL METHOD SayHello() - NOT overridden in Employee,
+        // So this runs the default version defined in the Person base class
+        emp.SayHello();
+
+        // Calls the VIRTULA METHOD SayRole() - IS overridden in Employee,
+        // So this runs Employee's custom version instead of person's default
+        emp.SayRole();
             
            
     }
