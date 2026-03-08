@@ -4,14 +4,17 @@ using System.Text;
 
 namespace TwentyOne
 {
-    public class Game
+    public abstract class Game // object
     {
         public List<string> Players { get; set; } // properties
         public string Name { get; set; } // properties
         public string Dealer {  get; set; } // properties
 
 
-        public void ListPlayers()
+        public abstract void Play();
+
+
+        public virtual void ListPlayers()
         {
             foreach(string player in Players)
             {
