@@ -4,7 +4,10 @@ using System.Text;
 
 namespace TwentyOne
 {
-    internal interface IWalkAway
+     interface IWalkAway
     {
+        public void WalkAway(Player player);
+
+
     }
 }

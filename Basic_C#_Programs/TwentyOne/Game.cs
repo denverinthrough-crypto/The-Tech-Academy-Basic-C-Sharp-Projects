@@ -6,7 +6,7 @@ namespace TwentyOne
 {
     public abstract class Game // object and abstract 
     {
-        public List<string> Players { get; set; } // properties
+        public List<Player> Players { get; set; } // properties
         public string Name { get; set; } // properties
         public string Dealer {  get; set; } // properties
 
@@ -16,9 +16,9 @@ namespace TwentyOne
 
         public virtual void ListPlayers()
         {
-            foreach(string player in Players)
+            foreach(Player player in Players)
             {
-                Console.WriteLine(player);
+                Console.WriteLine(player.Name);
             }
              
         }
