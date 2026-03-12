@@ -11,12 +11,14 @@ namespace TwentyOne
         static void Main(string[] args)
         {
 
-            Game game = new TwentyOneGame();
-            game.Players = new List<Player>();
-            Player player = new Player();
-            player.Name = "Dinber";
-            game += player;
-            game -= player;
+            //Game game = new TwentyOneGame();
+            //game.Players = new List<Player>();
+            //Player player = new Player();
+            //player.Name = "Dinber";
+            //game += player;
+            //game -= player;
+
+            
 
 
             Deck deck = new Deck(); // deck object created from the Deck class
@@ -30,6 +32,8 @@ namespace TwentyOne
             Console.WriteLine(deck.Cards.Count);
             Console.ReadLine();
         }
+
+        
 
        
 
