@@ -4,14 +4,14 @@ using System.Text;
 
 namespace TwentyOne
 {
-    public class Dealer
+    public class Dealer // "Dealer object"
     {
         // properties of Dealers
         public string Name { get; set; }
         public Deck Deck { get; set; }  
         public int Balance { get; set; }   
         
-        // methods
+        // method
         public void Deal(List<Card> Hand)
         {
             Hand.Add(Deck.Cards.First());

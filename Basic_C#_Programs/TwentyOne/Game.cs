@@ -1,14 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace TwentyOne
 {
     public abstract class Game // object and abstract 
     {
-        public List<Player> Players { get; set; } // properties
+        private List<Player> _players = new List<Player>();
+        private Dictionary<Player, int> _bets = new Dictionary<Player, int>();
+
+        public List<Player> Players { get { return _players; } set { _players = value; } } // properties
         public string Name { get; set; } // properties
-        public string Dealer {  get; set; } // properties
+        public Dictionary<Player, int> Bets { get { return _bets; } set { _bets = value; } }
+       
 
 
         public abstract void Play();
