@@ -1,0 +1,15 @@
+﻿@using MvcTutorial.Models
+
+@{
+    ViewData["Title"] = "Instructors";
+}
+
+<h1>Instructors</h1>
+
+@{
+    foreach(Instructor instructor in Model)
+    {
+        <h4>@instructor.FirstName</h4>
+    }
+}
+

@@ -85,7 +85,7 @@ namespace TwentyOne
             int[] dealerResults = GetAllPossibleHandValues(DealerHand);
 
             int playerScore = playerResults.Where(x => x < 22).Max(); // lambda expression filter
-            int dealerScore = dealerResults.Where(x => x > 22).Max();
+            int dealerScore = dealerResults.Where(x => x < 22).Max();
 
             if (playerScore > dealerScore) return true;
             if (playerScore < dealerScore) return false;
